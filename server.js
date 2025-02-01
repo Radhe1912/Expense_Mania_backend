@@ -8,7 +8,7 @@ const expenseRouter = require('./routes/expense_route');
 const connectDB = require('./db/db');
 
 app.use(cors({
-    origin: 'http://localhost:5173', // Allow your frontend to make requests to the backend
+    origin: 'https://expense-mania-tracker.vercel.app', // Allow your frontend to make requests to the backend
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow specific methods
     credentials: true, // Allow cookies to be sent with requests
 }));
