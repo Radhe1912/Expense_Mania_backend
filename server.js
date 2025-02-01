@@ -7,7 +7,7 @@ const router = require('./routes/route');
 const expenseRouter = require('./routes/expense_route');
 const connectDB = require('./db/db');
 
-const port = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;
 
 app.use(cors({}));
 
