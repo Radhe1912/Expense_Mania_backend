@@ -9,7 +9,11 @@ const connectDB = require('./db/db');
 
 const PORT = process.env.PORT || 5000;
 
-app.use(cors({}));
+app.use(cors({
+    origin: 'https://expense-mania-tracker.vercel.app', // Allow your frontend to make requests to the backend
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow specific methods
+    credentials: true, // Allow cookies to be sent with requests
+}));
 
 app.use(express.json());
 app.use(cookieParser());
