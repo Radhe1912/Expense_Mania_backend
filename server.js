@@ -19,6 +19,10 @@ app.use(cookieParser());
 app.use("/api/route", router);
 app.use("/api/expenses", expenseRouter);
 
+app.get("/", (req, res) => {
+    res.send("Backend is running successfully!");
+});
+
 connectDB().then(()=>{
     app.listen(process.env.PORT,()=>{
         console.log("Server started");
